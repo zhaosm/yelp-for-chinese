@@ -1,5 +1,12 @@
 # yelp-for-chinese
 
+## Run Backend
+```
+cd backend
+python backend.py
+```
+This will start the backend process on localhost:5000
+
 ## Project setup
 ```
 npm install
