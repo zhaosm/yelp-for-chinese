@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import time
 
 
 # configuration
@@ -16,6 +17,7 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 # sanity check route
 @app.route('/totalItems', methods=['GET'])
 def ping_pong():
+    time.sleep(5)
     forChinese = request.args.get('forChinese')
     if forChinese == 'true':
         totalItems = [{
