@@ -21,7 +21,7 @@
         <v-btn
           text
           icon
-          @click="keywords = keywordsEntered; "
+          @click="getTotalItems()"
         >
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
@@ -231,7 +231,6 @@
       categoriesSelected: [],
       pricesSelected: [],
       ratingsSelected: [],
-      keywords: "",
       keywordsEntered: "",
       loading: true,
     }),
@@ -253,18 +252,6 @@
       forChinese: function() {
         this.getTotalItems();
       },
-      categoriesSelected: function(value) {
-        console.log(value);
-      },
-      pricesSelected: function(value) {
-        console.log(value);
-      },
-      ratingsSelected: function(value) {
-        console.log(value);
-      },
-      keywords: function(value) {
-        console.log(value);
-      }
     },
 
     methods: {
@@ -281,7 +268,7 @@
         const path = "http://localhost:5000/totalItems";
         const params = {
           forChinese: this.forChinese,
-          keywords: this.keywords,
+          keywords: this.keywordsEntered,
           filter: { category: this.categoriesSelected, price: this.pricesSelected, rating: this.ratingsSelected }};
         axios
           .get(path, { params })
