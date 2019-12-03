@@ -109,6 +109,7 @@ I should try my standards, and their specialties, next time I'm in Detroit.  If 
 def total_items():
     global data
     forChinese = request.args.get('forChinese')
+    forChinese = True if (forChinese == 'true') else False
     keywords = request.args.get('keywords')
     filter = request.args.get('filter')
     print(forChinese, keywords, filter)
