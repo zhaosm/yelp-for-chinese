@@ -122,7 +122,7 @@
           <v-card>
             <div class="d-flex flex-no-wrap justify-space-between">
               <!--avatar-->
-              <div class="mx-4 my-auto">
+              <div class="mx-4 my-4">
                 <v-avatar
                   style="border-radius: 3%;"
                   size="250"
@@ -133,7 +133,7 @@
               </div>
 
               <!--basic information-->
-              <v-col cols="3" class="px-0">
+              <v-col cols="4" class="px-0">
                 <v-card-title
                   class="headline px-0"
                   v-text="item.rank + '. ' + item.name"
@@ -265,6 +265,7 @@
       },
       getTotalItems() {
         this.loading = true;
+        this.page = 1;
         const path = "http://localhost:5000/totalItems";
         const params = {
           forChinese: this.forChinese,
