@@ -12,4 +12,8 @@ with open('totalItems.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for line in readCSV:
         if line[8] in data:
+<<<<<<< HEAD
             print(str(line)[1:-1].replace("'","").replace('"',""))
+=======
+            print(line)
+>>>>>>> 84713658c78e03f5fffdc3c28e3f775969d5805e
