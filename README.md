@@ -7,6 +7,7 @@ put api_new.csv under backend/
 ```
 cd backend
 python backend.py
+cd ../
 ```
 This will start the backend process on localhost:5000
 
