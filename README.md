@@ -1,5 +1,8 @@
 # yelp-for-chinese
 
+## Data
+put api_new.csv under backend/
+
 ## Run Backend
 ```
 cd backend
